@@ -46,6 +46,12 @@ pub enum Id {
     Bytes(Vec<u8>),
 }
 
+impl Default for Id {
+    fn default() -> Self {
+        Self::U8(0)
+    }
+}
+
 impl SpreadAllocate for Id
 where
     Self: SpreadLayout,
